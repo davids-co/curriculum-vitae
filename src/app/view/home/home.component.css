@@ -1,0 +1,83 @@
+.container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.curriculum-vitae {
+    /* border: 1px red solid; */
+    width: 95%;
+    display: grid;
+    place-items: center;
+    grid-gap: 40px;
+    grid-template-rows: 200px 1fr;
+}
+
+.information {
+    /* border: 1px green solid; */
+    height: fit-content;
+    display: grid;
+    place-items: top center;
+    grid-template-rows: 35% 20% 30%;
+}
+
+.image-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+.image-circle img {
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-information {
+    
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.title{
+    font-size: 13px;
+    text-align: center;
+}
+
+/*  */
+.title-name {
+    /* border: 1px blue solid; */
+    display: grid;
+    place-items: left left;
+    grid-gap: 0px;
+    grid-template-columns: fit-content(100%) 1fr;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.prefix {
+    color: #70e000;
+    font-style: bold;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.social-links {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (min-width:600px) {
+    .curriculum-vitae {
+        place-items:  center left;
+        width: 80%;
+        grid-template-columns: 200px 1fr;
+    }
+}
