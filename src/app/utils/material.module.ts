@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
+import { MatStepperModule } from '@angular/material/stepper';
+
 
 @NgModule({
   imports: [
@@ -15,16 +17,16 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    MatTooltipModule,
-    
+    MatTooltipModule, MatStepperModule
+
   ],
   exports: [
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    MatTooltipModule,
-    
+    MatTooltipModule, MatStepperModule
+
   ],
   declarations: [],
 })

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="description-employment">
+        <div class="profile">
+            <div>
+                <h1 class="role-title">
+                    {{employments[currentEmployment].role}}</h1>
+            </div>
+            <div>
+                <p class="company-title">
+                    {{employments[currentEmployment].company}}</p>
+            </div>
+            <div>
+                <p class="date">
+                    ene 2022 - feb 2023 </p>
+            </div>
+            <div class="tag-container"> <span class="tag"
+                    *ngFor="let tag of employments[currentEmployment].tags; let eee = index  "
+                    [ngStyle]="{ 'color': getColorTag(eee),'border': getBorderTag(eee), 'background-color': getTransparentColorTag(eee)  }">
+                    {{tag}}</span>
+            </div>
+        </div>
+        <div class="functions">
+            <p class="functions" [innerHTML]="employments[currentEmployment].functions"> </p>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@ import { ToolbarComponent } from './view/components/toolbar/toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './view/home/home.component';
 import { FloatingBarComponent } from './view/components/floating-bar/floating-bar.component';
+import { TimelineComponent } from './view/components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FloatingBarComponent } from './view/components/floating-bar/floating-ba
     ToolbarComponent,
     HomeComponent,
     FloatingBarComponent,
+    TimelineComponent,
     
   ],
   imports: [

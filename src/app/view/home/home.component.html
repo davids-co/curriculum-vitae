@@ -1,27 +1,146 @@
-<div class="container">
-    <div class="curriculum-vitae">
-        <div class="image-circle">
-            <img src="./assets/images/cv_photo_without_background.webp" alt="profile-image">
-        </div>
-        <div class="information">
-            <div class="title-name">
-                <p class="prefix">dev</p>
-                <p class="text-information name">id suarez</p>
-            </div>
-            <div>
-                <p class="text-information title">full-stack software developer</p>
-            </div>
-            <div class="social-links">
-                <a target="_blank" href="https://www.linkedin.com/in/david-suarez-losada/"> <img
-                        class="social-media-icons" src="./assets/images/linkedin_icon.webp" alt="linkedin"></a>
+<div>
+    <section id="about" class="container" style="  height: 100vh;     display: grid;
+    place-items: center ;">
+        <div class="curriculum-vitae">
 
-                <a href="mailto:davidsuarezlosada@gmail.com" target="_blank"><img class="social-media-icons"
-                        src="./assets/images/gmail_icon.webp" alt="gmail"></a>
+            <div class="image-circle">
+                <img src="./assets/images/cv_photo_without_background.webp" alt="profile-image">
+            </div>
+            <div class="information">
+                <div class="title-name">
+                    <p class="prefix">dev</p>
+                    <p class="text-information name">id suarez</p>
+                </div>
+                <div>
+                    <p class="text-information title">full-stack software developer</p>
+                </div>
+                <div class="social-links">
+                    <div style="border-radius: 50%; background-color:white; width:40px; 
+                   align-items: center; height:40px;  display: flex;
+                   justify-content: center;"><a target="_blank"
+                            href="https://www.linkedin.com/in/david-suarez-losada/"><i class="fa fa-linkedin icon"
+                                style="color: #0A0B15"></i></a></div>
 
-                <a target="_blank" href="https://twitter.com/devid_suarez?t=XSo6Uzr_szTSu8GFoC1zlw&s=09"> <img
-                        class="social-media-icons" src="./assets/images/twitter_icon.webp" alt="twitter"></a>
+                    <a href="mailto:davidsuarezlosada@gmail.com" target="_blank"><i class="fa fa-google icon"></i></a>
+
+                    <a target="_blank" href="https://twitter.com/devid_suarez?t=XSo6Uzr_szTSu8GFoC1zlw&s=09"> <i
+                            class="fa fa-twitter icon"></i></a>
+                </div>
             </div>
         </div>
-    </div>
+
+    </section>
+    <section id="employment" class="employment-section"
+        style="min-height: 70vh; background-color: white; width:100% ;padding-top:1px ">
+        <div class="timeline-container" style="margin-top:20px; ">
+            <div class="timeline-points" style=" width: 100%; 
+            " [ngStyle]="{ 'grid-template-columns': gridTemplateColumnsPoints }">
+                <div class="timeline-point-edge"></div>
+                <div class="timeline-subcontainer" (click)="goToPoint(buttonIndex)" style="width:100%;"
+                    *ngFor="let timeline of employments;let buttonIndex = index">
+                    <div class="timeline-point" 
+                        [class.timeline-point-selected]="currentEmployment === buttonIndex">
+                    </div>
+                    <div [class.vertical-line-selected]="currentEmployment === buttonIndex" class="vertical-line"></div>
+                    <div class="text-time" style="width:90%; ">
+                        <div [class.employment-text-selected]="currentEmployment === buttonIndex"
+                        class="employment-text-date ">{{timeline.date.initial}}</div>
+                        <div [class.employment-text-selected]="currentEmployment === buttonIndex"
+                            class="employment-text employment-role-text">{{timeline.role}}</div>
+                        <div [class.employment-text-selected]="currentEmployment === buttonIndex"
+                            class="employment-text  ">{{timeline.company}}</div>
+                          
+
+                    </div>
+                  
+                </div>
+                <div class="timeline-point-edge"></div>
+            </div>
+
+            <div class="timeline" [ngStyle]="{ 'grid-template-columns': gridTemplateColumnsLines }">
+                <div></div>
+                <div class="timeline-line" *ngFor="let line of lines"></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- <div [@slide]="currentIndex">
+            <div *ngFor="let timeline of employments;let buttonIndex = index" style=" height:100%; width: 100%;   
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto;">
+              {{timeline.company}}</div>
+                <div style="background-color: red; height:100%; width: 80%" [@slideInLeft]
+                *ngIf="buttonIndex == currentEmployment && !test">{{timeline.company}}</div>
+            </div>
+        </div> -->
+
+
+        <div style="width: 100%;   ; margin-top:3rem; display: flex;
+        justify-content: center;">
+            <div class="description-employment" style=" ">
+
+                <div class="profile">
+                    <div style="">
+                        <h1 style="text-transform: uppercase; text-align: center; color: #483FD4;">
+                            {{employments[currentEmployment].role}}</h1>
+                    </div>
+                    <div style=" ">
+                        <p style="border: 1px solid pinks;text-align: center;font-size: 0.8rem;margin-top: 20px;">
+                            {{employments[currentEmployment].company}}</p>
+                    </div>
+                    <div style="">
+                        <p
+                            style="border: 1px solid pinks; font-size: 0.8rem; margin-top: 0px !important;text-align: center;">
+                            ene 2022 - feb 2023 </p>
+                    </div>
+                    <div style="display: flex;
+                        flex-wrap: wrap; height: min-content;gap: 5px; justify-content: center; "> <span style=" font-weight: bold;border-radius: 5px; font-size: 0.8rem;   padding-inline: 10px;padding-top: 5px; padding-bottom: 5px; height:min-content; flex-basis: calc(10% - 20px);white-space: nowrap;
+       " *ngFor="let tag of employments[currentEmployment].tags; let eee = index  " [ngStyle]="{ 'color': getColorTag(eee),'border': getBorderTag(eee), 'background-color': getTransparentColorTag(eee)  }"> {{tag}}</span> </div>
+                </div>
+                <div class="functions">
+                    <p style="white-space: pre-line; font-size: 0.9rem;"
+                        [innerHTML]="employments[currentEmployment].functions"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="description-employment" style="border: 1px solid green; width: 80%">
+            <div class="role">
+              <div class="roleName">{{ employments[currentEmployment].role }}</div>
+              <div class="company">{{ employments[currentEmployment].company }}</div>
+              <div class="logo" style="display: flex;
+              justify-content: center; align-items: center;">
+                <div><img style="width: 80px;" [src]="employments[currentEmployment].logo" alt=""></div>
+            </div>
+              <div class="companyName">{{ employments[currentEmployment].company }</div>
+            </div>
+            <div class="functions" style="border: 1px solid green"> {{ employments[currentEmployment].role }}</div>
+            <div class="roleInformation">
+              <div class="time">
+                <div class="dates"> {{ employments[currentEmployment].role }}</div>
+                <div class="tags" *ngFor="let tag of employments[currentEmployment].tags">
+                    <div>{{tag}}</div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+    </section>
+    <section id="education" style="height: 100vh;">
+
+
+
+
+
+
+
+    </section>
+    <section id="skills" style="height: 100vh; background-color: white; width:100%">
+
+    </section>
+
     <app-floating-bar></app-floating-bar>
 </div>

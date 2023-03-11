@@ -79,6 +79,41 @@ export class Animations {
         ]);
     }
 
+    static slide(duration: string, flag: boolean): AnimationTriggerMetadata {
+
+        return  trigger('slide', [
+            state('0', style({ transform: 'translateX(0)' })),
+            state('1', style({ transform: 'translateX(0)' })),
+            state('-1', style({ transform: 'translateX(0)' })),
+            
+            // transition(':leave', animate('500ms', style({ transform: `translateX(100%)` }))),
+            transition('-1 => 1', animate('500ms', style({ transform: `translateX(-100%)` }))),
+            transition('1 => -1', animate('500ms', style({ transform: `translateX(100%)` }))),
+            // transition('1 => 0', animate('500ms ease-out')),
+            // transition('-1 => 0', animate('500ms ease-out'))
+          ])
+
+
+    }
+
+    static slideOutLeft(duration: string): AnimationTriggerMetadata {
+        return trigger('slideOutLeft', [
+            state('*', style({ transform: 'translateX(0)' })),
+            transition(':leave', [
+                animate(duration, style({ transform: `translateX(100%)` }))
+            ])
+        ]);
+    }
+
+    static slideOutRight(duration: string): AnimationTriggerMetadata {
+        return trigger('slideOutRight', [
+            state('*', style({ transform: 'translateX(0)' })),
+            transition(':leave', [
+                animate(duration, style({ transform: `translateX(-100%)` }))
+            ])
+        ]);
+    }
+
     static slideInLeft(duration: string): AnimationTriggerMetadata {
         return trigger('slideInLeft', [
             state('void', style({ transform: 'translateX(100%)' })),
@@ -160,5 +195,5 @@ export class Animations {
         ]);
     }
 
-   
+
 }

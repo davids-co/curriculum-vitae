@@ -2,11 +2,15 @@
 
 
 ::-webkit-scrollbar {
-  /* background-color: transparent; */
+  background-color: transparent;
+  width: 0rem; /* Set the width of the scroll bar */
+  height: 0rem; /* Set the height of the scroll bar */
 }
 
 body {
   margin: 0;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+
   padding: 0;
 }
 

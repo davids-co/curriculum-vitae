@@ -1,4 +1,24 @@
 <div class="floating-button">
-    <button class="button-option" mat-stroked-button>Basic</button>
-    <button mat-stroked-button color="accent">Accent</button>
+  <ul>
+    <li [class.liSection] = "currentSection === 'about'" (click) = "scrollToSection('about')" style="--i:#E39C21;--j:#E39C21;">
+      <span  class="material-icons icon">person</span>
+      <span  class="title">about</span>
+    </li>
+    <li [class.liSection] = "currentSection === 'employment'" (click) = "scrollToSection('employment')" style="--i:#40904F;--j:#40904F;">
+      <span class="material-icons icon">badge</span>
+      <span class="title">employment</span>
+    </li>
+    <li [class.liSection] = "currentSection === 'education'" (click) = "scrollToSection('education')" style="--i:#483FD4;--j:#483FD4;">
+      <span class="material-icons icon">school</span>
+      <span class="title">education</span>
+    </li>
+    <li [class.liSection] = "currentSection === 'skills'"(click) = "scrollToSection('skills')"  style="--i:#C5221F;--j:#C5221F;">
+      <span class="material-icons icon">code</span>
+      <span class="title">skills</span>
+    </li>
+    <!-- <li style="--i:#FFA9C6;--j:#F434E2;">
+          <span class="icon"><i class="fa fa-instagram"></i></span>
+          <span class="titulo">instagram</span>
+        </li> -->
+  </ul>
 </div>
