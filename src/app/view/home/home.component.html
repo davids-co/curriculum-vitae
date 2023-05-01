@@ -32,27 +32,35 @@
     </section>
     <section id="employment" class="employment-section"
         style="min-height: 70vh; background-color: white; width:100% ;padding-top:1px ">
-        <div class="timeline-container" style="margin-top:20px; ">
+
+        <app-timeline2
+        [timelineData]="timelineArray"
+        (timelineSelected)="onTimelineSelected($event)"
+      ></app-timeline2>
+      <app-carousel
+        [timelineData]="timelineArray"
+        [selectedIndex]="selectedTimelineIndex"
+      ></app-carousel>
+        <!-- <div class="timeline-container" style="margin-top:20px; ">
             <div class="timeline-points" style=" width: 100%; 
             " [ngStyle]="{ 'grid-template-columns': gridTemplateColumnsPoints }">
                 <div class="timeline-point-edge"></div>
                 <div class="timeline-subcontainer" (click)="goToPoint(buttonIndex)" style="width:100%;"
                     *ngFor="let timeline of employments;let buttonIndex = index">
-                    <div class="timeline-point" 
-                        [class.timeline-point-selected]="currentEmployment === buttonIndex">
+                    <div class="timeline-point" [class.timeline-point-selected]="currentEmployment === buttonIndex">
                     </div>
                     <div [class.vertical-line-selected]="currentEmployment === buttonIndex" class="vertical-line"></div>
                     <div class="text-time" style="width:90%; ">
                         <div [class.employment-text-selected]="currentEmployment === buttonIndex"
-                        class="employment-text-date ">{{timeline.date.initial}}</div>
+                            class="employment-text-date ">{{timeline.date.initial}}</div>
                         <div [class.employment-text-selected]="currentEmployment === buttonIndex"
                             class="employment-text employment-role-text">{{timeline.role}}</div>
                         <div [class.employment-text-selected]="currentEmployment === buttonIndex"
                             class="employment-text  ">{{timeline.company}}</div>
-                          
+
 
                     </div>
-                  
+
                 </div>
                 <div class="timeline-point-edge"></div>
             </div>
@@ -62,7 +70,7 @@
                 <div class="timeline-line" *ngFor="let line of lines"></div>
                 <div></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div [@slide]="currentIndex">
             <div *ngFor="let timeline of employments;let buttonIndex = index" style=" height:100%; width: 100%;   
@@ -96,7 +104,9 @@
                     </div>
                     <div style="display: flex;
                         flex-wrap: wrap; height: min-content;gap: 5px; justify-content: center; "> <span style=" font-weight: bold;border-radius: 5px; font-size: 0.8rem;   padding-inline: 10px;padding-top: 5px; padding-bottom: 5px; height:min-content; flex-basis: calc(10% - 20px);white-space: nowrap;
-       " *ngFor="let tag of employments[currentEmployment].tags; let eee = index  " [ngStyle]="{ 'color': getColorTag(eee),'border': getBorderTag(eee), 'background-color': getTransparentColorTag(eee)  }"> {{tag}}</span> </div>
+       " *ngFor="let tag of employments[currentEmployment].tags; let eee = index  "
+                            [ngStyle]="{ 'color': getColorTag(eee),'border': getBorderTag(eee), 'background-color': getTransparentColorTag(eee)  }">
+                            {{tag}}</span> </div>
                 </div>
                 <div class="functions">
                     <p style="white-space: pre-line; font-size: 0.9rem;"

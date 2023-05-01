@@ -1,1 +1,9 @@
-<p>carousel works!</p>
+<ngb-carousel *ngIf="timelineData.length > 0">
+    <ng-template ngbSlide *ngFor="let point of timelineData; let i = index" [id]="'slide_' + i">
+      <div class="content">
+        <h4>{{ point.role }}</h4>
+        <p>{{ point.date }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  

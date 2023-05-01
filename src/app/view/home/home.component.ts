@@ -39,6 +39,19 @@ export class HomeComponent implements OnInit {
 
   test = false;
 
+  timelineArray = [
+    { role: 'Frontend Developer', date: '2003 - 2006' },
+    { role: 'Senior Frontend Developer', date: '2006 - 2010' },
+    { role: 'Frontend Team Lead', date: '2010 - 2016' },
+    { role: 'Frontend Architect', date: '2016 - Present' }
+  ];
+
+  selectedTimelineIndex: number | null = null;
+
+  onTimelineSelected(index: number) {
+    this.selectedTimelineIndex = index;
+  }
+
   currentEmployment = 0;
 
   employments: DataItem[] = [
