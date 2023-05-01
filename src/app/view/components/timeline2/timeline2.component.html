@@ -1,0 +1,11 @@
+<div class="timeline">
+    <div class="horizontal-line"></div>
+    <div *ngFor="let point of timelineData; let i = index" class="timeline-point"
+        [ngClass]="{ 'selected': i === selectedPoint, 'even': i % 2 === 0 }" (click)="onPointClick(i)">
+        <div class="circle"></div>
+        <div class="content">
+            <div class="role">{{ point.role }}</div>
+            <div class="date">{{ point.date }}</div>
+        </div>
+    </div>
+</div>
