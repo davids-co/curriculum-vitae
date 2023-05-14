@@ -1,0 +1,55 @@
+.container {
+    display: grid;
+    justify-content: start;
+    align-items: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.2fr 1.5fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "job-title"
+        "tags"
+        "job-description";
+    color: #ffffff;
+}
+
+.job-title h2 {
+    grid-area: job-title;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.job-title h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.job-title p {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.tags {
+    grid-area: tags;
+}
+
+.job-description {
+    margin-top: 1rem;
+    text-align: justify;
+    font-size: 0.7rem;
+    grid-area: job-description;
+    color: #ABBACF;
+}
+
+@media screen and (min-width:900px) {
+    .container {
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.8fr 0.3fr;
+        gap: 0px 1rem;
+        grid-template-areas:
+            "job-title job-description"
+            "tags tags";
+    }
+
+}

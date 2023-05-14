@@ -9,11 +9,4 @@ import { Animations } from './utils/animations.module';
 })
 export class AppComponent {
   title = 'personal-portfolio';
-
-  flag = true;
-
-
-  clickinMe() {
-    this.flag = false;
-  }
 }

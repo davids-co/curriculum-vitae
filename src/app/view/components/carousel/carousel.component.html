@@ -1,8 +1,7 @@
-<ngb-carousel *ngIf="timelineData.length > 0">
+<ngb-carousel *ngIf="timelineData.length > 0" [interval]="30000" (slide)="onSlideChanged($event)" (swipe)="handleSwipe($event)">
     <ng-template ngbSlide *ngFor="let point of timelineData; let i = index" [id]="'slide_' + i">
       <div class="content">
-        <h4>{{ point.role }}</h4>
-        <p>{{ point.date }}</p>
+        <app-work-history-card [workExperience]="point"></app-work-history-card>
       </div>
     </ng-template>
   </ngb-carousel>

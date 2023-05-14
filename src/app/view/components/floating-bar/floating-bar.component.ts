@@ -1,6 +1,7 @@
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
+import { CONSTANTS } from 'src/app/utils/constans.util';
 
 @Component({
   selector: 'app-floating-bar',
@@ -8,10 +9,13 @@ import { ScrollDispatcher } from '@angular/cdk/scrolling';
   styleUrls: ['./floating-bar.component.css']
 })
 export class FloatingBarComponent implements OnInit {
-  sectionIds = ['about', 'employment', 'education', 'skills'];
+  sectionIds = ['about', 'employment', 'projects'];
   currentSection: string | null = null;
 
-  constructor(private viewportScroller: ViewportScroller, private scrollDispatcher: ScrollDispatcher,private cd: ChangeDetectorRef) { }
+  constructor(
+    private viewportScroller: ViewportScroller,
+    private scrollDispatcher: ScrollDispatcher,
+    private changeDetector: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.scrollDispatcher.scrolled().subscribe(() => {
@@ -27,21 +31,21 @@ export class FloatingBarComponent implements OnInit {
     }
   }
 
-
-
   updateCurrentSection() {
     const position = this.viewportScroller.getScrollPosition();
     const sections = this.sectionIds.map((id) => document.getElementById(id));
+
     const currentSectionIndex = sections.findIndex((section) => {
-      const sectionTop = (section as HTMLElement).offsetTop;
-      const sectionHeight = (section as HTMLElement).offsetHeight;
-      // console.log("section", { "name": (section as HTMLElement).id, "height": sectionHeight, "top": sectionTop +200,"total":sectionTop + sectionHeight+ 200  });
-      return position[1] +250 >=  sectionTop  && position[1]+250 <= sectionTop + sectionHeight ;
+      return this.getSectionIndex(position, section!);
     });
+
     this.currentSection = currentSectionIndex >= 0 ? this.sectionIds[currentSectionIndex] : null;
-    console.log(this.currentSection);
-    
-    this.cd.detectChanges();
+    this.changeDetector.detectChanges();
   }
 
+  getSectionIndex(position: [number, number], section: HTMLElement) {
+    const sectionTop = (section as HTMLElement).offsetTop;
+    const sectionHeight = (section as HTMLElement).offsetHeight;
+    return position[1] + 250 >= sectionTop && position[1] + 250 <= sectionTop + sectionHeight;
+  }
 }

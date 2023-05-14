@@ -18,3 +18,38 @@ body {
   width: auto;
   height: 40px;
 }
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width:600px) {
+  html {
+    font-size:  calc(16px * 1.25);
+  }
+}
+
+@media screen and (min-width:700px) {
+  html {
+    font-size:  calc(16px * 1.375);
+  }
+}
+
+@media screen and (min-width:800px) {
+  html {
+    font-size: calc(16px * 1.5);
+  }
+}
+
+
+@media screen and (min-width:900px) {
+  html {
+    font-size: calc(16px * 1.675);
+  }
+}
+
+@media screen and (min-width:1100px) {
+  html {
+    font-size: calc(16px * 1.75);
+  }
+}

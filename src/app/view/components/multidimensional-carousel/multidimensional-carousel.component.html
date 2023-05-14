@@ -1,0 +1,28 @@
+<div class="overlay" (click)="closeCarousel.emit()" >
+    <div class="carousel-container" (click)="stopPropagation($event)">
+        <button class="carousel-control-prev" (click)="previous()">&lsaquo;</button>
+        <div class="carousel">
+            <button class="close-button" (click)="closeCarousel.emit()">
+                <span>&times;</span>
+            </button>
+            <div *ngFor="let project of projects; let i = index" class="carousel-item" [ngStyle]="getItemStyle(i)">
+                <div class="container">
+                    <div class="title" (swipe)="handleSwipe($event)">
+                        <h1>{{ project.title }}</h1>
+                    </div>
+                    <div class="logo" (swipe)="handleSwipe($event)">
+                        <img [src]="project.image" alt="{{ project.title }} Logo" />
+                    </div>
+                    <div class="description" (swipe)="handleSwipe($event)">
+                        <p [innerHTML]=project.description></p>
+                        <h2>{{ constants.achievementsAchieved }}</h2>
+                        <ul>
+                            <li *ngFor="let achievement of project.achievements" [innerHTML]="achievement"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-next" (click)="next()">&rsaquo;</button>
+    </div>
+</div>

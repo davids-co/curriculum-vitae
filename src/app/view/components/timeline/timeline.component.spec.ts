@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TimelineComponent } from './timeline.component';
 
-describe('TimelineComponent', () => {
+describe('Timeline2Component', () => {
   let component: TimelineComponent;
   let fixture: ComponentFixture<TimelineComponent>;
 

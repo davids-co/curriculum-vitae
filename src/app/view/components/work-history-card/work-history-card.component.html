@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="job-title">
+        <h2>{{ workExperience.role }}</h2>
+        <h3>{{ workExperience.company }}</h3>
+        <p>{{ workExperience.date.initial }} - {{ workExperience.date.final }}</p>
+    </div>
+    <div class="tags" >
+        <app-tag  *ngFor="let tag of workExperience.tags; let i = index" [color]=" workExperience.tags[i].color" [tag]="workExperience.tags[i].tag"></app-tag>
+    </div>
+    <div class="job-description">
+        <p [innerHTML]="workExperience.functions"></p>
+    </div>
+</div>

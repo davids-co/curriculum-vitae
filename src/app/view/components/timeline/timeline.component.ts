@@ -1,32 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
-
-
-interface DataItem {
-  id: number;
-  company: string;
-  role: string;
-  date: {
-    initial: string,
-    final: string,
-    total: string,
-  },
-  tags: string[],
-  functions: string
-}
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { JobInterface } from 'src/app/models/job.interface';
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css']
 })
+export class TimelineComponent {
+  @Input() selectedIndex: number | null = null;
+  @Input() timelineData: JobInterface[] = [];
+  @Output() timelineSelected = new EventEmitter<number>();
 
-export class TimelineComponent implements OnInit {
-  currentEmployment=0;
-  employments:DataItem[]=[];
-  constructor() { }
-
-  ngOnInit(): void {
+  onPointClick(index: number): void {
+    this.selectedIndex = index;
+    this.timelineSelected.emit(index);
   }
-
 }

@@ -4,21 +4,12 @@
     left: 50%;
     background-color: rgb(17, 24, 47);
     transform: translateX(-50%);
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    border-radius: 2rem !important;
+    border-radius: 3rem !important;
     border: 1px rgba(30, 41, 59, .5) solid;
     outline: none;
     padding: 10px;
     z-index: 999;
 
-}
-
-.floating-button:hover {
-    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-}
-
-.button-option {
-    /* background-color: transparent; */
 }
 
 * {
@@ -36,9 +27,9 @@ ul li {
     background-color: rgba(30, 41, 59, .8);
     position: relative;
     list-style: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -48,7 +39,7 @@ ul li {
 }
 
 ul li:hover {
-    width: 120px;
+    width: 3rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
 }
 
@@ -101,18 +92,30 @@ ul li:hover .icon {
 ul li .title {
     font-family: Arial, sans-serif;
     color: #fff;
-    font-size: 1em !important;
+    font-size: 0.6rem !important;
     letter-spacing: 0.1em;
     transform: scale(0);
     transition: 0.5s;
     transition-delay: 0s;
 }
 
-ul .liSection{
+ul .liSection {
     background: linear-gradient(45deg, var(--i), var(--j));
 }
 
 ul li:hover .title {
     transform: scale(1);
     transition-delay: 0.25s;
+}
+
+@media screen and (min-width:900px) {
+    ul li:hover {
+        width: 6rem;
+    }
+
+    ul li {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2rem;
+    }
 }

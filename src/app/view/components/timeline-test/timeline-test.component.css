@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.role-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #483FD4;
+}
+
+.company-title {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.date {
+    border: 1px solid pinks;
+    font-size: 0.8rem;
+    margin-top: 0px !important;
+    text-align: center;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: min-content;
+    gap: 5px;
+    justify-content: center;
+}
+
+.tag {
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding-inline: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: min-content;
+    flex-basis: calc(10% - 20px);
+    white-space: nowrap;
+}
+
+.functions {
+    white-space: pre-line;
+    font-size: 0.9rem;
+}

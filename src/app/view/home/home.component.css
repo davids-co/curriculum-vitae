@@ -1,88 +1,42 @@
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+/* [ngClass]="{'no-scroll': false}" */
+
+.about-section {
     width: 100%;
-    display: grid;
-    place-items: center;
+    height: 100vh;
+    display: flex;
+    display: flex;
+    justify-content: center;
 }
 
-.curriculum-vitae {
-    /* border: 1px red solid; */
-    width: 95%;
-    display: grid;
-    place-items: center;
-    grid-gap: 40px;
-    grid-template-rows: 200px 1fr;
+app-profile-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.information {
-    /* border: 1px green solid; */
-    height: fit-content;
-    display: grid;
-    place-items: top center;
-    grid-template-rows: 35% 20% 30%;
-}
 
-.image-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 30%;
+
+.no-scroll {
     overflow: hidden;
 }
 
-.image-circle img {
-    margin-left: 5%;
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text-information {
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-.title {
-    font-size: 0.8em;
-    text-align: center;
-}
-
-/*  */
-.title-name {
-    /* border: 1px blue solid; */
-    display: grid;
-    place-items: left left;
-    grid-gap: 0px;
-    grid-template-columns: fit-content(100%) 1fr;
-}
-
-.name {
-    font-size: 2em;
-}
-
-.prefix {
-    color: #70e000;
-    font-style: bold;
-    font-size: 2em;
-    font-family: Arial, sans-serif;
-}
-
-.social-links {
-    width: 100%;
-    display: grid;
-    place-items: center;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.employment-role-text{
-    font-weight: bold;
-}
-
-.icon {
-    color: white;
-    transform: scale(1.5);
-}
-
 /* ----- */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
 
 
 .timeline-container {
@@ -167,11 +121,25 @@
 }
 
 .employment-section {
+    background-color: #1C4E80;
+    border-radius: 2rem;
+    min-height: 70vh;
+    width: 95%;
+    padding-top: 1px;
     display: grid;
     place-items: start center;
     grid-gap: 0px;
     grid-template-rows: 150px 1fr;
 }
+
+app-timeline {
+    width: 90%;
+}
+
+app-carousel {
+    width: 100%;
+}
+
 
 .employment-text {
     opacity: 0.5;
@@ -180,9 +148,7 @@
 }
 
 .description-employment {
-
     width: 90%;
-   
 }
 
 
@@ -198,21 +164,19 @@
 
 /* ---- */
 @media screen and (min-width:600px) {
-    .curriculum-vitae {
-        place-items: center left;
+    app-profile-card {
         width: 80%;
-        grid-template-columns: 200px 1fr;
     }
 
     .description-employment {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         gap: 0px;
-    
+
         width: 80%;
         grid-template-areas: "profile functions"
     }
-    
+
     .profile {
         grid-area: profile;
         display: grid;
@@ -221,15 +185,16 @@
     }
 
     .functions {
-       padding-inline: 30px;
+        padding-inline: 30px;
     }
-    
+
     .employment-text {
         font-size: 0.6em;
         display: inline;
         width: 90%;
         /* border-top: 1px solid red; */
     }
+
     .employment-text-date {
         writing-mode: initial;
         margin-left: 0px;
@@ -278,6 +243,32 @@
 
     .employment-text {
         font-size: 0.7em;
+    }
+
+    app-timeline {
+        width: 70%
+    }
+
+    app-carousel {
+        width: 95%;
+    }
+
+    .employment-section {
+        width: 98%;
+        border-radius: 1rem;
+    }
+
+}
+
+@media screen and (min-width:900px) {
+    app-carousel {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    app-carousel {
+        width: 80%;
     }
 }
 

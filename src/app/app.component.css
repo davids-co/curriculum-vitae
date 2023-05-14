@@ -1,8 +1,6 @@
 .app-container {
-    /* height: 100vh; */
     background: #0A0B15;
     width:100%
-    /* background: linear-gradient(45deg, #333333, #666666); */
 }
 
 .app-content {
