@@ -35,7 +35,7 @@
 .job-description {
     margin-top: 1rem;
     text-align: justify;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     grid-area: job-description;
     color: #ABBACF;
 }
@@ -50,6 +50,10 @@
         grid-template-areas:
             "job-title job-description"
             "tags tags";
+    }
+
+    .job-description {
+        margin-top: 0rem;
     }
 
 }

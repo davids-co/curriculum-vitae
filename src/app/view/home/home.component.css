@@ -3,10 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-   
 }
-
-/* [ngClass]="{'no-scroll': false}" */
 
 .about-section {
     width: 100%;
@@ -165,7 +162,7 @@ app-carousel {
 /* ---- */
 @media screen and (min-width:600px) {
     app-profile-card {
-        width: 80%;
+        width: 90%;
     }
 
     .description-employment {

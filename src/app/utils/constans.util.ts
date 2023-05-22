@@ -104,10 +104,10 @@ const getEmployments = (): JobInterface[] => {
         { tag: "Jira", color: "#FFC400" },
         { tag: "Kotlin", color: "#69F0AE" }
         ],
-        functions: `• Restructured the development team and defined tech stacks, resulting in 10% increase in productivity.<br><br> 
-       • Implemented a QA testing area and best development practices, resulting in 20% reduction in bugs and 5% improvement in product quality.<br><br>
-       • Led 18 mobile and web app projects, improving timely delivery by 10%.<br><br>
-       • Managed cloud services infrastructure (AWS) and improved security by leading a WAPP, resulting in 18% increase in WAF test.<br><br>
+        functions: `• <font color = "#E39C21"><b>Restructured the development team</b></font> and defined tech stacks, resulting in 10% increase in productivity.<br><br> 
+       • <font color = "#E39C21"><b>Implemented a QA testing area</b></font> and best development practices, resulting in 20% reduction in bugs and 5% improvement in product quality.<br><br>
+       • <font color = "#E39C21"><b>Led more than 18 mobile and web app projects</b></font>, improving timely delivery by 10%.<br><br>
+       • Managed cloud services infrastructure (AWS) and <font color = "#E39C21"><b>improved security</b></font> by leading a WAPP, resulting in 18% increase in WAF test.<br><br>
        `
     },
     {
@@ -129,10 +129,10 @@ const getEmployments = (): JobInterface[] => {
             { tag: "Jira", color: "#FFC400" },
             { tag: "Kotlin", color: "#69F0AE" }
             ],
-        functions: `• Developed and implemented software applications using Kotlin, Angular, and Node.js, resulting in improved system reliability.<br><br>
-       • Led technical execution of 8 successful mobile and web app projects, contributing to front-end and backend processes, ensuring timely delivery and client satisfaction.<br><br>
-       • Collaborated with cross-functional teams to prioritize development initiatives, ensuring efficient delivery of projects.<br><br>
-       • Mentored and trained junior developers, improving team members' skills.<br><br>
+        functions: `• Developed and implemented software applications using <font color = "#E39C21"><b>Kotlin, Angular and Node.js</b></font>, resulting in improved system reliability.<br><br>
+       • Led technical execution of 8 successful mobile and web app projects, contributing to <font color = "#E39C21"><b>front-end and backend</b></font> processes, ensuring timely delivery and client satisfaction.<br><br>
+       • Collaborated with <font color = "#E39C21"><b>cross-functional teams</b></font> to prioritize development initiatives, ensuring efficient delivery of projects.<br><br>
+       • Mentored and trained junior developers, <font color = "#E39C21"><b>improving team members' skills</b></font>.<br><br>
        `
     },
     {
@@ -149,10 +149,10 @@ const getEmployments = (): JobInterface[] => {
         { tag: "TypeScript", color: "#00B0FF" },
         { tag: "JavaScript", color: "#FFC400" },
         { tag: "Kotlin", color: "#69F0AE" }],
-        functions: `• Developed and maintained software applications using TypeScript, JavaScript, and MySQL, resulting in 8% increase in user satisfaction.<br><br>
-       • Developed and implemented the Android mobile app in Kotlin for Super Wow SAS, resulting in 17% reduction in bugs.<br><br>
-       • Developed features for the Android mobile app of Efecty, a financial sector app with more than 1M downloads.<br><br>  
-       • Conducted analysis and evaluation of customer requirements, ensuring deliverables met client expectations.<br><br>
+        functions: `• Developed and maintained software applications using <font color = "#E39C21"><b>TypeScript, JavaScript and MySQL</b></font>, resulting in 8% increase in user satisfaction.<br><br>
+       • <font color = "#E39C21"><b>Developed and implemented the Android mobile app</b></font> in Kotlin for Super Wow SAS, resulting in 17% reduction in bugs.<br><br>
+       • Developed features for the Android mobile app of Efecty, a <font color = "#E39C21"><b>financial sector</b></font> app with more than 1M downloads.<br><br>  
+       • Conducted analysis and evaluation of customer requirements, <font color = "#E39C21"><b>ensuring deliverables met client expectations</b></font>.<br><br>
  `
     },
     {
@@ -170,9 +170,9 @@ const getEmployments = (): JobInterface[] => {
         { tag: "Power BI", color: "#FF6A00" },
         { tag: "Excel", color: "#69F0AE" },
         { tag: "SAP", color: "" }],
-        functions: `• Developed a geolocation dashboard in Power BI that generated savings of COP 360.000.000 for corporate route services planning.<br><br>
-       • Developed and implemented a budget control dashboard, resulting in a 10% reduction in expenses for all lines of operation.<br><br>
-       • Led the IT support team, reducing ANS and equipment replacement costs by 20% through implementation of best practices.<br><br>
+        functions: `• Developed a geolocation dashboard in Power BI that generated <font color = "#E39C21"><b>savings of COP 360.000.000</b></font> for corporate route services planning.<br><br>
+       • Developed and implemented a <font color = "#E39C21"><b>budget control dashboard</b></font>, resulting in a 10% reduction in expenses for all lines of operation.<br><br>
+       • <font color = "#E39C21"><b>Led the IT support team</b></font>, reducing ANS and equipment replacement costs by 20% through implementation of best practices.<br><br>
             `
     }
     ]
@@ -185,14 +185,14 @@ export const CONSTANTS = Object.freeze({
         prefixName: 'dev',
         name: 'id suarez',
         title: 'full-stack software developer',
-        description: `<font color = "#E39C21">I am a seasoned </font> full-stack developer with a strong background in software development, mobile and web
-        applications, and project management. With 10 years of experience and a master's degree in project
-        management, I excel in creating innovative solutions and optimizing processes.<br><br>
-        Skilled in Node.js, Kotlin, and various technologies, I have led numerous software projects and have a
+        description: `I am a seasoned <font color = "#E39C21"><b>full-stack developer</b></font> with a strong background in software development, mobile and web
+        applications, and project management. With <font color = "#E39C21"><b>10 years of experience and a master's degree in project
+        management</b></font>, I excel in creating innovative solutions and optimizing processes.<br><br>
+        Skilled in <font color = "#E39C21"><b>Node.js, Kotlin, Angular</b></font> and various technologies, I have led numerous software projects and have a
         proven track record in timely
         project delivery.<br><br>
         My goal is to push boundaries in the development world, fostering an environment that
-        encourages growth and learning, mentoring junior developers, and learning from my peers.`
+        <font color = "#E39C21"><b>encourages growth and learning</b></font>, mentoring junior developers, and learning from my peers.`
     },
     employments: getEmployments(),
     projects: getProjects()

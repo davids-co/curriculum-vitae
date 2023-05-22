@@ -39,6 +39,7 @@
     grid-template-columns: fit-content(100%) 1fr;
     align-items: end;
     margin-top: 1rem;
+    margin-bottom: -1rem;
 }
 
 .text-information {
@@ -47,18 +48,18 @@
 }
 
 .title {
-    font-size: 0.7em;
+    font-size: 0.9rem;
     text-align: center;
 }
 
 .name {
-    font-size: 1em;
+    font-size: 1.5rem;
 }
 
 .prefix {
     color: #70e000;
     font-style: bold;
-    font-size: 1em;
+    font-size: 1.5rem;
     font-family: Arial, sans-serif;
 }
 
@@ -107,6 +108,6 @@
     }
 
     .profile p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
